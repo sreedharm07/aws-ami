@@ -21,9 +21,9 @@ data "aws_security_group" "allow_tls" {
 resource "null_resource" "commands" {
   provisioner "remote-exec" {
    connection {
-     user = "centos"
+     user = "root"
      password = "DevOps321"
-     host = "root"
+     host = aws_instance.ami.private_ip
    }
     inline = [
      "labauto ansible"
