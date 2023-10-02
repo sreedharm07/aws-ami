@@ -10,7 +10,7 @@ resource "aws_instance" "ami" {
   vpc_security_group_ids    = [data.aws_security_group.allow_tls.id]
 
   tags = {
-    Name  = ami
+    Name  = "ami"
   }
 }
 
